@@ -1,0 +1,9 @@
+{
+  "name": "ChopLab Scratch Room",
+  "short_name": "Scratch Room",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ede2c8",
+  "theme_color": "#ede2c8",
+  "description": "Original-synthesis DJ scratching playground using record position and crossfader controls."
+}

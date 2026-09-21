@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ede2c8">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <title>ChopLab Scratch Room</title>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">CHOPLAB / TURNTABLE PLAYGROUND</p>
+      <h1>Scratch Room</h1>
+      <p class="lead">スクラッチは効果音ではなく、短い音を前後に動かし、クロスフェーダーで刻んで、ビートの上で演奏する楽器です。</p>
+    </header>
+
+    <section class="lesson" aria-label="スクラッチの仕組み">
+      <article><b>RECORD · p(t)</b><span>円盤の左右移動。速さが音程、左向きが逆再生です。</span></article>
+      <article><b>FADER · g(t)</b><span>上がOPEN、下がCLOSED。2msで滑らかに閉じ、クリックを防ぎます。</span></article>
+      <article><b>PLAY</b><span><code>source[p(t)] × g(t) × gain</code> を120 BPMのビートへ重ねます。</span></article>
+    </section>
+
+    <section class="deck">
+      <div class="status-row"><button id="audio-start">音を有効にする</button><button id="beat-toggle" aria-pressed="true">BEAT ON</button><span id="status" role="status">STARTを押してください</span></div>
+      <div class="instrument">
+        <div id="record" class="record" role="application" tabindex="0" aria-label="スクラッチ円盤。左右で速度、上下でクロスフェーダー">
+          <div class="rings"></div><div class="label">AHH<br><small>ORIGINAL SYNTH</small></div><div id="needle" class="needle"></div>
+        </div>
+        <div class="fader-panel">
+          <label for="fader">CROSS FADER <output id="fader-value">100%</output></label>
+          <input id="fader" type="range" min="0" max="1" step="0.01" value="1">
+          <div class="meter"><i id="meter"></i></div>
+          <p>円盤上部はOPEN、下部はCLOSED。円盤を斜めに動かすと両方を同時に演奏できます。</p>
+        </div>
+      </div>
+      <div class="techniques" aria-label="基本テクニック">
+        <button data-technique="baby"><b>BABY</b><span>フェーダーを開いたまま前後</span></button>
+        <button data-technique="chirp"><b>CHIRP</b><span>切返しで閉じ、2音に分ける</span></button>
+        <button data-technique="transform"><b>TRANSFORM</b><span>フェーダーで声を打楽器にする</span></button>
+      </div>
+      <button id="stop" class="stop">ALL STOP</button>
+    </section>
+
+    <section class="examples">
+      <h2>同じ音源・違う手つき</h2>
+      <p>同じオリジナル合成声を、保存した <code>p(t)</code> と <code>g(t)</code> だけで再生した検証例です。</p>
+      <div><label>BABY<audio controls preload="metadata" src="audio/baby.wav"></audio></label><label>CHIRP<audio controls preload="metadata" src="audio/chirp.wav"></audio></label><label>TRANSFORM<audio controls preload="metadata" src="audio/transform.wav"></audio></label></div>
+    </section>
+
+    <section class="how">
+      <h2>30秒で試す</h2>
+      <ol><li>「音を有効にする」</li><li>円盤を右・左へ動かす</li><li>上下にも動かして音を切る</li><li>BABY → CHIRP → TRANSFORMを聴き比べる</li></ol>
+      <p>音源はこのページが生成するオリジナルの合成声とドラムだけです。録音、アップロード、外部API、Cookie、解析送信はありません。</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

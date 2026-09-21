@@ -1,0 +1,43 @@
+{
+  "source": "original-ahh.wav",
+  "sourceSha256": "cfff7773396ee0cd341fa548b69096999dff69cdf1cfeb575bf45b14c2c7ab5c",
+  "provenance": "Every output sample comes from original-ahh.wav through p(t), g(t), gain, declared bandlimited resampling and DC removal; no target or third-party audio.",
+  "records": [
+    {
+      "technique": "baby",
+      "wav": "baby.wav",
+      "wavSha256": "35d898d4cf6fcf4d7f0e25becb183bcbbc71205e5af0fb7e1db1eae8f306c779",
+      "controls": "baby.controls.npz",
+      "controlsSha256": "0160f35effecbe0b5c5f40021f895225659410eb5ada53fce3dcd96c6b3cc380",
+      "renderer": {
+        "output": "C:\\Users\\rambo\\Documents\\ChatGPT\\pad\\outputs\\choplab-exhibit-20260923-studio\\scratch-room\\audio\\baby.wav",
+        "duration_seconds": 1.0,
+        "source_only": true
+      }
+    },
+    {
+      "technique": "chirp",
+      "wav": "chirp.wav",
+      "wavSha256": "2c4a3f4fa8fbca70388897fcb461912c3be2085df62ea7a5197ab965e5e66a04",
+      "controls": "chirp.controls.npz",
+      "controlsSha256": "12d5eea8b3f2b3fa66d7e38d0ffc97092ed6cad56a932f8b69840140753b61e2",
+      "renderer": {
+        "output": "C:\\Users\\rambo\\Documents\\ChatGPT\\pad\\outputs\\choplab-exhibit-20260923-studio\\scratch-room\\audio\\chirp.wav",
+        "duration_seconds": 1.0,
+        "source_only": true
+      }
+    },
+    {
+      "technique": "transform",
+      "wav": "transform.wav",
+      "wavSha256": "32460a5e1800c3ff82034d8fdde8306cabee89307b9a1f3a4d92bf93256851bb",
+      "controls": "transform.controls.npz",
+      "controlsSha256": "af6f0172a57e3f7e21c4059e82c17b7d9ca90700ec3d725d971eb5283825011d",
+      "renderer": {
+        "output": "C:\\Users\\rambo\\Documents\\ChatGPT\\pad\\outputs\\choplab-exhibit-20260923-studio\\scratch-room\\audio\\transform.wav",
+        "duration_seconds": 1.0,
+        "source_only": true
+      }
+    }
+  ]
+}

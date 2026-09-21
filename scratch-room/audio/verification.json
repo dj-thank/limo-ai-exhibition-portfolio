@@ -1,0 +1,35 @@
+{
+  "baby": {
+    "rate": 48000,
+    "frames": 48000,
+    "peak": 0.22050200402736664,
+    "maxAdjacentDelta": 0.03021302819252014,
+    "forwardFrames": 22783,
+    "reverseFrames": 22783,
+    "closedFaderFrames": 2,
+    "closedFaderPeak": 0.0,
+    "sourceOnly": "Source positions and fader, bandlimited resampling, DC removal; no added noise or target audio"
+  },
+  "chirp": {
+    "rate": 48000,
+    "frames": 48000,
+    "peak": 0.2582440972328186,
+    "maxAdjacentDelta": 0.03538442216813564,
+    "forwardFrames": 22783,
+    "reverseFrames": 22783,
+    "closedFaderFrames": 14163,
+    "closedFaderPeak": 0.0,
+    "sourceOnly": "Source positions and fader, bandlimited resampling, DC removal; no added noise or target audio"
+  },
+  "transform": {
+    "rate": 48000,
+    "frames": 48000,
+    "peak": 0.32460251450538635,
+    "maxAdjacentDelta": 0.04480591416358948,
+    "forwardFrames": 22783,
+    "reverseFrames": 22783,
+    "closedFaderFrames": 25855,
+    "closedFaderPeak": 0.0,
+    "sourceOnly": "Source positions and fader, bandlimited resampling, DC removal; no added noise or target audio"
+  }
+}
