@@ -83,12 +83,16 @@
     await ensureAudio(); routine++; activePointer = event.pointerId; record.setPointerCapture(event.pointerId);
     lastX = event.clientX; lastTime = event.timeStamp; setFader(1 - event.offsetY / record.clientHeight); status.textContent = 'MANUAL SCRATCH';
   });
+  // A finger held still must stop the record, like the desktop app (120 ms idle).
+  let idleTimer = 0;
   record.addEventListener('pointermove', event => {
     if (event.pointerId !== activePointer) return;
     const dt = Math.max(1, event.timeStamp - lastTime), dx = event.clientX - lastX;
     targetSpeed = Math.max(-4, Math.min(4, dx * 1000 / dt / 420));
     const rect = record.getBoundingClientRect(); setFader(1 - (event.clientY - rect.top) / rect.height);
     lastX = event.clientX; lastTime = event.timeStamp;
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => { if (activePointer !== null) targetSpeed = 0; }, 120);
   });
   function release(event) { if (event.pointerId !== activePointer) return; activePointer = null; targetSpeed = 0; setFader(0); status.textContent = '停止 — テクニックか円盤を選べます'; }
   record.addEventListener('pointerup', release); record.addEventListener('pointercancel', release);
